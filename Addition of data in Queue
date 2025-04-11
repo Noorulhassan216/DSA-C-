@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+const int Qsize=5;
+int n[Qsize];
+int i=0;
+void front(int x)
+{
+    if(i==Qsize)
+    {
+        cout<<"Queue is Full\n";
+    }
+    else
+    {
+        n[i]=x;
+        cout<<"Added "<<x<<endl;
+        i++;
+    }
+}
+int main()
+{
+    front(12);
+    front(11);
+    front(19);
+    front(18);
+    front(20);
+    front(22);
+    front(24);
+    front(17);
+}
