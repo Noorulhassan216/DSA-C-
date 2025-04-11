@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+const int smax = 4;
+int a[smax];
+int top = -1;
+
+void push(int x) {
+    if (top < smax - 1) {//As array is always starts from 0 thats why (smax-1)
+        top++;
+        a[top] = x;//value of x is stored in array
+        cout << "Pushed " << x << endl;
+    } else {
+        cout << "Stack is Full" << endl;
+    }
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+    push(40);
+    push(50);
+    push(60); 
+    return 0;
+}
